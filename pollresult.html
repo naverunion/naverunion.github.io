@@ -41,7 +41,6 @@
 			  width: 50%;
 			}
 			.image.main img.btn {
-				width: auto;
 			  display: inline;
 			}
 
@@ -49,30 +48,31 @@
 		    border-bottom: none;
 			}
 
+			.tab-outter {
+				display: inline-block;
+				line-height: 0px;
+			}
+			.tab-outter > table {
+				margin-bottom: 0;
+				background-color: transparent;
+			}
+
+			table tbody tr:nth-child(2n + 1) {
+				background-color: transparent;
+			}
+			table tbody tr {
+				border-color: transparent;
+			}
+
+			/*div.tab1{margin: 10% 15% 0 0; width: 10%; height:auto;}*/
+			.image.main img.tab1{margin: 0 5% 0 0; width: auto; height:2.5vw;}
+			.image.main img.tab2{margin: 0 5% 0 0; width: auto; height:2.5vw;}
+			.image.main img.tab3{margin: 0 5% 0 0; width: auto; height:2.5vw;}
+			.image.main img.tab4{margin: 0 0 0 0; width: auto; height:2.5vw;}
 			@media (min-width:870px) {
-				img.tab1{margin: 20px 35px 0 0; max-width: 45px;height:auto;}
-			    img.tab2{margin: 20px 35px 0 0; max-width: 173px;height:auto;}
-			    img.tab3{margin: 20px 35px 0 0; max-width: 219px;height:auto;}
-			    img.tab4{margin: 20px 0 0 0; max-width: 140px;height:auto;}
+				.image.main img.tab {height:24px;}
 			}
-			@media (min-width:580px) and (max-width:869px) {
-				img.tab1{margin: 10px 15px 0 0; max-width: 30px;height:auto;}
-			    img.tab2{margin: 10px 15px 0 0; max-width: 115px;height:auto;}
-			    img.tab3{margin: 10px 15px 0 0; max-width: 146px;height:auto;}
-			    img.tab4{margin: 10px 0 0 0; max-width: 93px;height:auto;}
-			}
-			@media (min-width:400px) and (max-width:579px) {
-	    		img.tab1{margin: 10px 10px 0 0; max-width: 23px;height:auto;}
-	    		img.tab2{margin: 10px 10px 0 0; max-width: 87px;height:auto;}
-	    		img.tab3{margin: 10px 10px 0 0; max-width: 110px;height:auto;}
-		    	img.tab4{margin: 10px 0 0 0; max-width: 70px;height:auto;}
-			}
-			@media (min-width:0px) and (max-width:399px) {
-	    		img.tab1{margin: 10px 8px 0 0; max-width: 15px;height:auto;}
-	    		img.tab2{margin: 10px 8px 0 0; max-width: 57px;height:auto;}
-	    		img.tab3{margin: 10px 8px 0 0; max-width: 73px;height:auto;}
-		    	img.tab4{margin: 10px 0 0 0; max-width: 46px;height:auto;}
-			}
+
 		</style>
 	</head>
 	<body class="is-loading">
@@ -105,24 +105,32 @@
 							<section class="post">
 								<header class="major">
 									<span class="date">April 27, 2018</span>
-								<div class="image main">
+								<div class="image main" style="line-height: 0">
 									<img src="images/pollresult/top.jpg" srcset="images/pollresult/top.jpg 1x, images/pollresult/top@2x.jpg 2x"/>
-									<a name="tab">
-									<div>
+									<a name="tab"> </a>
+									<div class="tab-outter" style="width:100%;">
+										<table width="100%" align="center" valign="center">
+										<tr><td>
 										<a href="#tab" onclick="showTab(1);">
-                                            <img class="tab btn tab1" src="images/pollresult/btn_all.png" />
+                      <img class="tab btn tab1" src="images/pollresult/btn_all.png" />
 										</a>
-										<a href="#tab" onclick="showTab(2);">
-                                            <img class="tab btn tab2" src="images/pollresult/btn_naver.png" />
+<a href="#tab" onclick="showTab(2);">
+                      <img class="tab btn tab2" src="images/pollresult/btn_naver.png" />
 										</a>
-										<a href="#tab" onclick="showTab(3);">
+<a href="#tab" onclick="showTab(3);">
 											<img class="tab btn tab3" src="images/pollresult/btn_line.png" />
 										</a>
-										<a href="#tab" onclick="showTab(4);">
+<a href="#tab" onclick="showTab(4);">
 											<img class="tab btn tab4" src="images/pollresult/btn_is.png" />
 										</a>
+										
+										</td></tr>
+										</table>
 									</div>
-									<img src="images/pollresult/hr.jpg" style="margin-top:1%" srcset="images/pollresult/hr.jpg 1x, images/pollresult/hr@2x.jpg 2x"/>
+
+									<div>
+										<img src="images/pollresult/hr.jpg" style="margin-top:1%" srcset="images/pollresult/hr.jpg 1x, images/pollresult/hr@2x.jpg 2x"/>
+									</div>
 								</div>								
 								</header>
                           
